@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="MyWebApplication._Default" %>
 
+<%-- The Content tag below corresponds to a ContentPlaceHolder tag in the Site.Master page. ContentPlaceHolderID of "MainContent" describes the ContentPlaceHolder in the Site.Master page where the content will be placed, in this case at ID of "MainContent" in the Master's page. Say you have multiple ContentPlaceHolder in your Master page, you can tell each of your Content controls on your page where to place the content. --%>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <asp:Button ID="btnRedirect" runat="server" OnClick="btnRedirect_Click" Text="Redirect to Contact Page" />
 
@@ -39,5 +40,5 @@
             </p>
         </div>
     </div>
-
+    
 </asp:Content>

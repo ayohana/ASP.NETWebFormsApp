@@ -1,4 +1,12 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="MyWebApplication.SiteMaster" %>
+﻿<%--
+    // MASTER PAGES =================================
+    // ASP.NET Web Forms applications utilize Master Templates which are a centralized file where you can manage the header, footer and body of your site all in one place.
+    // The final rendered HTML of the page is a combination of the Master Template and the Active Server Page
+    // The Master Page contains the <html>, <head>, and <body> tags that will be rendered out to for the final HTML document. The Master Page can also include server side code, user controls, and server controls, allowing dynamic content.
+--%>
+
+<%-- This line below declares this page to be a Master template file, declares the Code Behind File Name to be "Site.master.cs" and the Class Name that it inherits from which is "MyWebApplication.SiteMaster". This allows us to create Server Controls with Server events on this page and interact with Server-Side Objects. --%>
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="MyWebApplication.SiteMaster" %>
 
 <!DOCTYPE html>
 
@@ -6,7 +14,8 @@
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - My ASP.NET Application</title>
+    <title><%: Page.Title %> - Adela's First Web Form App</title>
+    <%-- "Page" in the line above is an example of a Server-Side Object. We have access to the Page object as we have declared that the code behind is inherited from the class "MyWebApplication.SiteMaster" --%>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
@@ -62,7 +71,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+                <p>&copy; <%: DateTime.Now.Year %> - Adela's First Web Form Application</p>
             </footer>
         </div>
 
