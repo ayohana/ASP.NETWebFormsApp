@@ -25,7 +25,9 @@
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
 </head>
+
 <body>
+    <%-- <form> tag below has a runat="server" attribute, making it an HTML Server Control. This allows us to interact with the HTML element in the server-side code. --%>
     <form runat="server">
         <asp:ScriptManager runat="server">
             <Scripts>

@@ -19,6 +19,15 @@ using System.Web.UI.WebControls;
 // They also feature controls which are objects on the ASP.NET pages that render HTML to the browser when the page is requested.
 // You can also create your own, reusable controls that can be used on multiple pages. These are called "User Controls".
 
+// BASIC SERVER CONTROLS =========================
+// There are 3 different types of Server Controls in ASP.NET Web Forms:
+// 1. HTML Server Controls
+// 2. Web Server Controls
+// 3. Validation Server Controls
+
+// In order to be a Server Control, regardless of type, the tag must contain the runat="server" attribute
+// Server Controls are named things like button, textbox, dropdownlist, and allow you to interact with and create events for these controls. You can also bind data to these controls, for dynamic content.
+
 namespace MyWebApplication
 {
     public partial class _Default : Page
