@@ -42,6 +42,39 @@ using System.Web.UI.WebControls;
 // View State can affect performance. If you have a large number of controls, you'll have a large number of ViewStates being stored.
 // View States can be useful especially when a user has to fill in a very long form. Just in case something happens, the info doesn't get lost.
 
+// PAGE LIFE CYCLE & EVENTS =======================
+// ASP.NET Web Forms Page Life Cycle is important to understand in order to implement events and initialize controls.
+// Here's the Life Cycle:
+// 1. The Page Request
+// 2. Start
+// 3. Page Initialization
+// 4. Page Load
+// 5. Page Validation
+// 6. PostBack Event Handling
+// 7. Rendering
+// 8. Unload
+// Note that Page_Load (stage 4) comes before the PostBack event (e.g. btnSubmit_Click event; stage 6)!
+// In most of your development cycle, you'll be concerned with stages #4-6: Page Load, Page Validation, and PostBack Event Handling.
+//
+// The 8 Stages of the Life Cycle:
+// 1. The Page Request
+// When the page is requested by a user (client makes a request to the server), the caching, parsing and compiling is determined by ASP.NET.
+// 2. Start
+// In the start page, the page properties are set. In ASP.NET, Page is an object with properties such as "Request" and "IsPostBack". The "Request" property would consist of an HTTP request data such as query string parameters and headers. The "IsPostBack" property tells you whether the page has been loaded for the first time or if the user is posting the page. These are the properties you can access in the CodeBehind of aspx pages.
+// 3. Page Initialization
+// In this phase, page controls become available and themes are applied. If this is a PostBack, the properties of the controls will not yet have the data from the PostBack.
+// 4. Page Load
+// The control properties are set from the View State. This means that any user  select values are now avaialble in the properties of the controls.
+// 5. Page Validation
+// The Validate() method is called for all of the validation controls of the page. The validation control properties are also set, such as "IsValid".
+// 6. PostBack Event Handling
+// If the user is submitting data and the page is "posting back" to itself, then events are handled. For example, when a user clicks on a button, the "OnClick" method will be called during this stage.
+// 7. Rendering
+// View State is saved for the page and makes field values "sticky". This phase calls the render method for each control that renders the HTML to be returned in the response.
+// 8. Unload
+// The cleanup stage. This stage occurs after the response is sent to the client. Page properties are unloaded. The page life cycle is now complete.
+
+
 
 namespace MyWebApplication
 {
