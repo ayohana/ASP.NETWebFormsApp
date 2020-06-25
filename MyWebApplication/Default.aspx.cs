@@ -35,6 +35,12 @@ using System.Web.UI.WebControls;
 // One of the most powerful features of ASP.NET Web Forms is the ability to map Server Side Events to controls that users interact with on the client. For example, if a user clicks on a button, selects a box, or selects an option from a drop down list (and much more), you can perform server-side logic!
 // In ASP.NET Web Forms Application, the majority of your application logic will exist in your Server Side code. Your presentation markup with exist in your .aspx page and your application in your codeBehind.
 
+// VIEW STATE ====================================
+// Without a methodology for tracking page state, a web application by default is stateless.
+// In ASP.NET, when we submit, we aren't submitting data from one page to another page, we are submitting a page to itself. This is called a "POST BACK", since the page is posting data back to itself.
+// View State makes forms "sticky" - field values don't disappear after submitting the form so user input is not lost. Each of the server controls on the page, their state is encoded and sent to the server every time the page is submitted.
+// View State can affect performance. If you have a large number of controls, you'll have a large number of ViewStates being stored.
+// View States can be useful especially when a user has to fill in a very long form. Just in case something happens, the info doesn't get lost.
 
 
 namespace MyWebApplication
