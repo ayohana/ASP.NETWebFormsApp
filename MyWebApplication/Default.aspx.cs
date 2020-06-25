@@ -28,6 +28,9 @@ using System.Web.UI.WebControls;
 // In order to be a Server Control, regardless of type, the tag must contain the runat="server" attribute
 // Server Controls are named things like button, textbox, dropdownlist, and allow you to interact with and create events for these controls. You can also bind data to these controls, for dynamic content.
 
+// ADVANCED SERVER CONTROLS ======================
+// In addition to Web Server Controls (e.g. TextBox, Button, DropDownList) that map up to common HTML elements like input and select, there are more complex server controls that provide advanced functionality and/or display of dynamic data.
+
 namespace MyWebApplication
 {
     public partial class _Default : Page
