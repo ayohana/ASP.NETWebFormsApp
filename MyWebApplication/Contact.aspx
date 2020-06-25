@@ -32,7 +32,7 @@
     </div>
     <div>
         <label>Favorite Color</label>
-        <asp:DropDownList ID="ddlColor" runat="server">
+        <asp:DropDownList ID="ddlColor" OnSelectedIndexChanged="ddlColor_SelectedIndexChanged" AutoPostBack="true" runat="server">
             <asp:ListItem Text="Select a color" Value="" />
             <asp:ListItem Text="Blue" Value="Blue" />
             <asp:ListItem Text="Red" Value="Red" />

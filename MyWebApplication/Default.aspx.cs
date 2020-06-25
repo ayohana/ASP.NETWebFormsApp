@@ -31,6 +31,12 @@ using System.Web.UI.WebControls;
 // ADVANCED SERVER CONTROLS ======================
 // In addition to Web Server Controls (e.g. TextBox, Button, DropDownList) that map up to common HTML elements like input and select, there are more complex server controls that provide advanced functionality and/or display of dynamic data.
 
+// WEB SERVER CONTROL EVENTS =====================
+// One of the most powerful features of ASP.NET Web Forms is the ability to map Server Side Events to controls that users interact with on the client. For example, if a user clicks on a button, selects a box, or selects an option from a drop down list (and much more), you can perform server-side logic!
+// In ASP.NET Web Forms Application, the majority of your application logic will exist in your Server Side code. Your presentation markup with exist in your .aspx page and your application in your codeBehind.
+
+
+
 namespace MyWebApplication
 {
     public partial class _Default : Page
